@@ -1,0 +1,17 @@
+<h1 *ngIf="detail">{{ detail.name }}</h1>
+
+<ul *ngIf="detail">
+  <li><strong>Username: </strong>{{ detail.username }}</li>
+  <li><strong>Email: </strong>{{ detail.email }}</li>
+  <li><strong>Phone: </strong>{{ detail.phone }}</li>
+  <select [(ngModel)]="formOp"
+  (change)="placeholder()">
+    <option value="name">Name</option>
+    <option value="email">Email</option>
+    <option value="phone">Phone</option>
+    <option value="username">Username</option>
+  </select>
+  <input type="text"
+  [(ngModel)]="input"
+  (input)="update()">
+</ul>
